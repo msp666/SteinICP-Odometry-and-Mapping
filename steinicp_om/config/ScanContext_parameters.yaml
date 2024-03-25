@@ -1,0 +1,8 @@
+---
+/steinicp/onlineFGO_test:
+   ros__parameters:
+      ScanContext_parameters:
+         USE_SC: false
+         PC_NUM_RING: 20
+         PC_NUM_SECTOR: 60
+         PC_MAX_RADIUS: 80.

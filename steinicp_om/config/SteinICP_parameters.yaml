@@ -1,0 +1,50 @@
+---
+/steinicp/onlineFGO_test:
+   ros__parameters:
+      SteinICP_parameters:
+           optimizer : "Adam"
+           iterations: 120
+           batch_size: 1000
+           particle_size: 1000
+           normalize: true
+           lr: 0.003
+           max_dist: 0.3
+           msg_buffer_gap_seconds: 0.05
+           using_EarlyStop: true
+           convergence_steps: 3
+           convergence_threshold: 0.03
+
+           deskew_cloud: false
+
+           max_range: 80.0
+           min_range: 5.0
+           voxelization: true
+           voxel_size: 0.1
+           map_voxel_max_points: 20
+           map_voxel_size: 1.0
+
+           USE_Segmentation: true
+
+           USE_BetaSteinICP: true
+           BetaSteinICPOptions:
+               r: 0.02
+               tau: 0.01
+               beta: -0.9
+               md_iterations: 3000
+               weight_update_loops: 5
+               use_weight_mean: true
+
+           save_particle_info: true
+
+           sub_topic: "/boreas/velodyne_points"
+                     # /velodyne_points   
+                     # /lio_sam/deskew/cloud_deskewed   
+                     # /boreas/velodyne_points
+                     # /os_cloud_node/points
+                     # /rslidar_points
+
+                     # data path
+                     # /home/haoming/Desktop/2022-03-31_IMU_NovAtel_PPS_RTCM_Ublox_Velodyne10Hz_City/
+                     # /mnt/data/new_college_complete/2021-ouster-os0-128-alphasense/collection_1_newer_college/2021-07-01-10-37-38-quad-easy/
+                     # /mnt/data/new_college_complete/2021-ouster-os0-128-alphasense/collection_3_maths_institute/2021-04-07-13-49-03_0-math-easy/
+                     # /mnt/data/ros2bag_boreas-2020-12-18-13-44/
